@@ -1,0 +1,37 @@
+{% extends 'base.html'%} {% block head %}
+<title>Contact</title>
+{% endblock %} {% block body %}
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <p>Vous souhaitez nous contacter? Remplissez le formulaire ci-dessous pour m'envoyer un message et nous vous répondrai dans les plus brefs délais!</p>
+
+            <form action="/contact/" id="contactForm" method="POST">
+
+
+                {% csrf_token %}
+
+                <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Your Name</label> {{ form.name }}
+                    <p class="help-block text-danger"></p>
+                </div>
+                <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Your E-mail</label> {{ form.email }}
+                    <p class="help-block text-danger"></p>
+                </div>
+                <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Your Message</label> {{ form.body }}
+                    <p class="help-block text-danger"></p>
+                </div>
+                <br>
+                <div id="success"></div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<hr> {% endblock %}

@@ -1,26 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Blog</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-</head>
-<body>
-<article>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-md-10 mx-auto">
-                {% for post in posts %}
-                <h2 class="section-heading">{{ post.title }}</h2>
+{% extends 'base.html' %} {% block head%}
+<title>Home</title>
+{% endblock %} {% block body %}
+<!-- Main Content -->
+<div class="container">
+    <h3 style="text-align: center;"> NOS ACTIVITES </h3>
+    <hr style="text-align: center; width: 200px;">
 
-          <p>{{posts.content}}</p>
-          <img class="img-fluid" src="{{ post.image_url.url }}">
-<!--                <span class="caption text-muted">{{ posts.date_pub }}</span>-->
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-preview">
 
-        {% endfor %}
+                <h2 class="post-title">
+                    Agro-pastorale et sécurité alimentaire,approche communautaire
+                </h2>
+                <!-- <h3 class="post-subtitle">
+                    Problems look mighty small from 150 miles up
+                </h3> -->
+                </a>
+                <p class="post-meta">
+                    310 ménages de Kambululu- Lushebere ont eu chacun un champ dans la plantation propre au président de la FOKAK, Mr RADJABU RUGISHI SHAMWESI durant 5ans pour leurs activités champêtres. Et 203 autres mamans d’Ihusi regroupés dans deux associations, AVOT
+                    et MUSO TUSHIRIKIANE ont été appuyées par des outils oratoires (houes, bèches et tridents), des semences dans une autre plantation propre à Mr RADJABU RUGISHI SHAMWESI, et 5chevres pour l’élevage
+                </p>
             </div>
+            <hr>
+            <div class="post-preview">
+
+                <h2 class="post-title">
+                    Santé par l’approche communautaire
+                </h2>
+                </a>
+                <p class="post-meta">Le Centre Hospitalier de Nyabibwe a été appuyé par 60 matelas avec housses de même que 50 autres matelas avec housses affectés aux centres de santé et hôpitaux de : Numbi, Shange et Rumbishi dans les hauts plateaux de Kalehe. Au centre
+                    Hospitalier de Nyabibwe, plus de 50 malades, et dans les hauts plateaux plus de 50 malades, ont été bénéficiés de paiement de leur factures d’hospitalisation. Aussi paiement des factures d’hospitalisation de plus de 50 autres enfants
+                    malades atteint de la rougeole au Centre Hospitalier de Nyabibwe . Construction de deux bâtiments destinés pour un bloc opératoire, laboratoire et construction de 6 latrines en matériaux durables. La réhabilitation du poste de santé
+                    de Bujuki à Kabulu II à Nyabibwe. </p>
+            </div>
+            <hr>
+            <div class="post-preview">
+
+                <h2 class="post-title">
+                    Entreprenariat, approche communautaire
+                </h2>
+                <!-- <h3 class="post-subtitle">
+                    We predict too much for the next year and yet far too little for the next ten.
+                </h3> -->
+                </a>
+                <p class="post-meta">Une symbiose des 6 associations des mamans de Nyabibwe (Banyama rujembere, AFDKA tuungane, Obuguma, IFPDI, Rujembere, Buhunvikane Ruzazi) a été appuyée de deux kits complets de moulin à mazout pour enfin financer de leur tour à des activités
+                    de micro-crédit et d’élevage.</p>
+            </div>
+            <hr>
+            <div class="post-preview">
+
+                <h2 class="post-title">
+                    Education, approche individuel et communautaire
+                </h2>
+                <!-- <h3 class="post-subtitle">
+                    Many say exploration is part of our destiny, but it’s actually our duty to future generations.
+                </h3> -->
+                </a>
+                <p class="post-meta"> - Individuel : Le Paiement partiel de frais académiques des trois étudiants de : UOB, ULGL ISTD/kalehe. Et trois autres jeunes désœuvrés de Nyabibwe font l’apprentissage en conduite automobile à l’INPP. 11 enfants d’Ihusi sont en la charge
+                    de scolarisation de la FOKAK.
+                    <br> - Communautaire : La construction de 6 latrines publiques à l’Institut Nengapete kalehe-nyabibwe. </p>
+            </div>
+
+            <!-- Pager -->
+            <!-- <div class="clearfix">
+                <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+            </div> -->
         </div>
     </div>
-</article>
-</body>
-</html>
+</div>
+
+<hr> {% endblock %}

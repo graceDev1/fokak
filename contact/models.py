@@ -4,3 +4,4 @@ class Blog(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
     image_url = models.ImageField(upload_to='image_uri', blank=True)
+    date_pub = models.DateTimeField(auto_now_add=True)

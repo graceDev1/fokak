@@ -1,0 +1,21 @@
+{% extends 'base.html'%} {% load static %} {% block head%}
+<title>post</title>
+{% endblock %} {% block body %}
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                {% for post in post %}
+                <h2 class="section-heading">{{ post.title }}</h2>
+
+                <p>{{post.content}}</p>
+                <img class="img-fluid" src="{{ post.image_url.url }}">
+                <span class="caption text-muted">{{ post.date_pub }}</span> {% endfor %}
+            </div>
+        </div>
+    </div>
+</article>
+
+<hr> {% endblock %}

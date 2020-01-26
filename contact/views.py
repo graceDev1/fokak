@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.conf import settings
 from django.contrib import messages
 from django.http import HttpResponseRedirect
@@ -14,10 +14,8 @@ from .models import Blog
 
 
 def index(request):
-    post = Blog.objects.all()
-
-    context = {'posts': post}
-    return render(request, 'index.html', context)
+    
+    return render(request, 'index.html')
 
 def post(request):
     post = Blog.objects.all()

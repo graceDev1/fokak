@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-
+from .cont_info import EMAIL_BACKEND, EMAIL_HOST,EMAIL_HOST_USER,EMAIL_PORT,EMAIL_PORT,EMAIL_USE_TLS,EMAIL_HOST_PASSWORD
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -136,9 +136,9 @@ MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'image_uri')
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static')
 
 # config ration of mail
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'grace.devolop@gmail.com'
-EMAIL_HOST_PASSWORD = 'sunday12#'
-EMAIL_PORT = 587
+EMAIL_BACKEND = EMAIL_BACKEND
+EMAIL_USE_TLS = EMAIL_USE_TLS
+EMAIL_HOST = EMAIL_HOST
+EMAIL_HOST_USER = EMAIL_HOST_USER
+EMAIL_HOST_PASSWORD = EMAIL_HOST_PASSWORD
+EMAIL_PORT = EMAIL_PORT

@@ -5,13 +5,6 @@ from django.http import HttpResponseRedirect
 from .forms import ContactForm
 from django.core.mail import send_mail
 from .models import Blog
-# def contact(request):
-#     subject = 'sending mail'
-#     message = ' your mail has been sended successfully'
-#     from_send = settings.EMAIL_HOST_USER
-#     to_send = [settings.EMAIL_HOST_USER]
-#     send_mail(subject, message, from_send, to_send, fail_silently=True)
-
 
 def index(request):
     
@@ -35,8 +28,8 @@ def about(request):
                        'd’appuyer les initiatives locales de développemlent.'
         },
         {
-            'title': 'Mission',
-            'content': ''
+            'title': 'Mission et Vision',
+            'content': 'La FONDATION KALEHE KWETU, FOKAK en sigle, est une association sans but lucratif de droit congolais  dont la vision est de voir les enfants, les jeunes et les femmes vivre de façon autonome en exploitant les ressources et opportunités locales dans l’objectif de défendre et  promouvoir les intérêts de la population dans le domaine de santé, l’agriculture, l’élevage, la pêche, l’éducation et la culture et sport. FOKAK asbl s’engage en termes de mission de créer  et d’appuyer les initiatives locales de développement.'
         }
 
     ]
